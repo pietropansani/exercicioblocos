@@ -1,21 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+  min-height: 100vh;
+  margin: 0;
+  background: #0d172e;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.linha1{
-    display: flex;
-    justify-content: flex-start;
-    height: 50vh;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 100vh;
+  padding: 11px;
 }
-.box1{
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-    border: 1px solid white;
-    text-align: center;
-    place-content: center;
+
+.linha {
+  display: flex;
+  gap: 11px;
+  min-height: 70px;
 }
-.linha2{
-    display: flex;
-    justify-content: center;
-    
+
+.linha > div {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  place-items: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #b700ff 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 55%);
+}
+
+.linha--inicio { justify-content: flex-start; }
+.linha--centro { justify-content: center; }
+.linha--fim { justify-content: flex-end; }
+.linha--espacada { justify-content: space-between; }
+.linha--ao-redor { justify-content: space-around; }
+.linha--entre { justify-content: space-evenly; }
+.linha--invertida { justify-content: space-between; }
+.linha--invertida > div:first-child { order: 3; }
+.linha--invertida > div:last-child { order: -1; }
+
+@media (max-width: 500px) {
+  .container { gap: 16px; }
+  .linha { min-height: 56px; }
+  .linha > div { width: 56px; height: 56px; }
 }
