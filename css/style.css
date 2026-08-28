@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+.linha1{
+    display: flex;
+    justify-content: flex-start;
+    height: 50vh;
+}
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid white;
+    text-align: center;
+    place-content: center;
+}
+.linha2{
+    display: flex;
+    justify-content: center;
+    
+}
